@@ -187,13 +187,22 @@
         {{ 'NAV.HOME' | translate }}
       </a>
 
-      <!-- Solutions group -->
-      <button type="button"
-              class="w-full flex items-center justify-between py-2 text-slate-700 dark:text-nav-grey"
-              (click)="toggleMobileSolutions()">
-        <span>{{ 'NAV.SOLUTIONS' | translate }}</span>
-        <span class="text-xs" [class.rotate-180]="isMobileSolutionsOpen">▾</span>
-      </button>
+      <!-- Solutions group: title → /solutions, arrow → toggle submenu -->
+      <div class="w-full flex items-center justify-between py-2">
+        <a routerLink="/solutions"
+           (click)="closeMobileMenu()"
+           routerLinkActive="font-bold text-slate-900 dark:text-white"
+           class="text-slate-700 dark:text-nav-grey flex-1">
+          {{ 'NAV.SOLUTIONS' | translate }}
+        </a>
+        <button type="button"
+                class="p-2 -mr-2 text-slate-700 dark:text-nav-grey"
+                (click)="toggleMobileSolutions(); $event.stopPropagation()"
+                [attr.aria-expanded]="isMobileSolutionsOpen"
+                aria-label="Toggle solutions submenu">
+          <span class="text-xs inline-block transition-transform" [class.rotate-180]="isMobileSolutionsOpen">▾</span>
+        </button>
+      </div>
       <div *ngIf="isMobileSolutionsOpen" class="pl-4 space-y-1 text-[11px] tracking-[0.18em]">
         <a routerLink="/logistics" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
           {{ 'NAV.LOGISTICS' | translate }}
@@ -229,13 +238,17 @@
         {{ 'NAV.ABOUT_US' | translate }}
       </a>
 
-      <!-- Client group -->
-      <button type="button"
-              class="w-full flex items-center justify-between py-2 text-slate-700 dark:text-nav-grey"
-              (click)="toggleMobileClient()">
-        <span>{{ 'NAV.CLIENT' | translate }}</span>
-        <span class="text-xs" [class.rotate-180]="isMobileClientOpen">▾</span>
-      </button>
+      <!-- Client group: no main page → only arrow toggles submenu -->
+      <div class="w-full flex items-center justify-between py-2">
+        <span class="text-slate-700 dark:text-nav-grey flex-1">{{ 'NAV.CLIENT' | translate }}</span>
+        <button type="button"
+                class="p-2 -mr-2 text-slate-700 dark:text-nav-grey"
+                (click)="toggleMobileClient(); $event.stopPropagation()"
+                [attr.aria-expanded]="isMobileClientOpen"
+                aria-label="Toggle client submenu">
+          <span class="text-xs inline-block transition-transform" [class.rotate-180]="isMobileClientOpen">▾</span>
+        </button>
+      </div>
       <div *ngIf="isMobileClientOpen" class="pl-4 space-y-1 text-[11px] tracking-[0.18em]">
         <a routerLink="/offer" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
           {{ 'NAV.RESELLER' | translate }}

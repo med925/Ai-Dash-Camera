@@ -15,6 +15,10 @@ export class NavbarComponent {
     public translate: TranslateService
   ) {}
 
+  isMobileMenuOpen = false;
+  isMobileSolutionsOpen = false;
+  isMobileClientOpen = false;
+
   get currentLang(): string {
     return (this.translate.currentLang || this.translate.defaultLang || 'fr').toUpperCase().slice(0, 2);
   }
@@ -24,5 +28,27 @@ export class NavbarComponent {
     this.translate.use(next);
     localStorage.setItem(LANG_STORAGE_KEY, next);
     document.documentElement.lang = next;
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (!this.isMobileMenuOpen) {
+      this.isMobileSolutionsOpen = false;
+      this.isMobileClientOpen = false;
+    }
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
+    this.isMobileSolutionsOpen = false;
+    this.isMobileClientOpen = false;
+  }
+
+  toggleMobileSolutions() {
+    this.isMobileSolutionsOpen = !this.isMobileSolutionsOpen;
+  }
+
+  toggleMobileClient() {
+    this.isMobileClientOpen = !this.isMobileClientOpen;
   }
 }

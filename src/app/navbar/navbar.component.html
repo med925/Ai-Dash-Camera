@@ -1,11 +1,12 @@
 <nav class="fixed top-0 left-0 w-full z-50 bg-slate-300/95 dark:bg-black/30 backdrop-blur-xl border-b border-slate-400 dark:border-white/10 font-base transition-colors">
-  <div class="max-w-[1440px] mx-auto px-8 h-20 flex items-center justify-between">
+  <div class="max-w-[1440px] mx-auto px-4 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
     
     <div class="flex items-center shrink-0">
-      <img src="assets/logo_accent_blanc.png" alt="Accent" class="h-12 w-auto brightness-125 dark:brightness-125 hidden dark:block">
-      <img src="assets/Logo ACCENT Violet.png" alt="Accent" class="h-12 w-auto block dark:hidden">
+      <img src="assets/logo_accent_blanc.png" alt="Accent" class="h-14 lg:h-16 w-auto brightness-125 dark:brightness-125 hidden dark:block">
+      <img src="assets/Logo ACCENT Violet.png" alt="Accent" class="h-14 lg:h-16 w-auto block dark:hidden mix-blend-multiply">
     </div>
 
+    <!-- Desktop navigation -->
     <div class="hidden lg:flex items-center space-x-12 font-cyber">
     
     <a routerLink="/" 
@@ -109,9 +110,10 @@
        class="text-[13px] tracking-[0.2em] uppercase text-slate-600 dark:text-nav-grey font-medium hover:text-cyber-cyan transition-all duration-300">
         {{ 'NAV.COMPLIANCE' | translate }}
     </a>
-</div>
+    </div>
 
-    <div class="flex items-center space-x-4">
+    <!-- Right utilities (theme, lang, CTA, hamburger) -->
+    <div class="flex items-center space-x-3 lg:space-x-4">
       
       <button type="button" (click)="theme.toggle()" 
               class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-200/80 dark:bg-white/5 border border-slate-300 dark:border-white/5 text-slate-600 dark:text-cyber-cyan hover:bg-cyber-cyan hover:text-black dark:hover:bg-cyber-cyan dark:hover:text-black transition-all"
@@ -143,7 +145,7 @@
       </div>
 
       <div (click)="switchLanguage()" 
-            class="flex items-center space-x-2 px-3 py-1.5 rounded-full border border-slate-300 dark:border-white/20 bg-slate-200/50 dark:bg-white/5 hover:border-cyber-cyan/50 transition-all cursor-pointer group">
+            class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-full border border-slate-300 dark:border-white/20 bg-slate-200/50 dark:bg-white/5 hover:border-cyber-cyan/50 transition-all cursor-pointer group">
             
             <span class="text-xs font-bold text-cyber-cyan tracking-widest">{{ currentLang }}</span>
             
@@ -153,10 +155,121 @@
         </div>
 
       <a [routerLink]="['/contact']" 
-        class="px-8 py-2.5 bg-cyber-cyan text-black font-bold text-sm uppercase tracking-wider rounded-xl shadow-[0_0_20px_rgba(217,227,63,0.4)] hover:shadow-[0_0_35px_rgba(217,227,63,0.6)] hover:scale-105 transition-all duration-300 flex items-center justify-center cursor-pointer">
+        class="hidden md:flex px-6 lg:px-8 py-2.5 bg-cyber-cyan text-black font-bold text-xs lg:text-sm uppercase tracking-wider rounded-xl shadow-[0_0_20px_rgba(217,227,63,0.4)] hover:shadow-[0_0_35px_rgba(217,227,63,0.6)] hover:scale-105 transition-all duration-300 items-center justify-center cursor-pointer">
         {{ 'NAV.CONTACT' | translate }}
       </a>
 
+      <!-- Mobile hamburger -->
+      <button type="button"
+              class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg border border-slate-400 bg-slate-300/80 text-slate-900 dark:bg-white/5 dark:border-white/20 dark:text-white"
+              (click)="toggleMobileMenu()"
+              aria-label="Toggle navigation">
+        <svg *ngIf="!isMobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg *ngIf="isMobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div *ngIf="isMobileMenuOpen" class="lg:hidden border-t border-slate-400 dark:border-white/10 bg-slate-300/95 dark:bg-black/40">
+    <div class="px-4 pt-2 pb-4 space-y-2 font-cyber text-[13px] uppercase tracking-[0.2em]">
+      <a routerLink="/"
+         (click)="closeMobileMenu()"
+         routerLinkActive="font-bold text-slate-900 dark:text-white"
+         [routerLinkActiveOptions]="{exact:true}"
+         class="block py-2 text-slate-700 dark:text-nav-grey">
+        {{ 'NAV.HOME' | translate }}
+      </a>
+
+      <!-- Solutions group -->
+      <button type="button"
+              class="w-full flex items-center justify-between py-2 text-slate-700 dark:text-nav-grey"
+              (click)="toggleMobileSolutions()">
+        <span>{{ 'NAV.SOLUTIONS' | translate }}</span>
+        <span class="text-xs" [class.rotate-180]="isMobileSolutionsOpen">▾</span>
+      </button>
+      <div *ngIf="isMobileSolutionsOpen" class="pl-4 space-y-1 text-[11px] tracking-[0.18em]">
+        <a routerLink="/logistics" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.LOGISTICS' | translate }}
+        </a>
+        <a routerLink="/oil-gas" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.OIL_GAS' | translate }}
+        </a>
+        <a routerLink="/taxi" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.TAXI' | translate }}
+        </a>
+        <a routerLink="/school-bus" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.SCHOOL_BUS' | translate }}
+        </a>
+        <a routerLink="/public-bus" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.PUBLIC_BUS' | translate }}
+        </a>
+        <a routerLink="/car-rental" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.RENT_CAR' | translate }}
+        </a>
+      </div>
+
+      <a routerLink="/products"
+         (click)="closeMobileMenu()"
+         routerLinkActive="font-bold text-slate-900 dark:text-white"
+         class="block py-2 text-slate-700 dark:text-nav-grey">
+        {{ 'NAV.PRODUCTS' | translate }}
+      </a>
+
+      <a routerLink="/about-us"
+         (click)="closeMobileMenu()"
+         routerLinkActive="font-bold text-slate-900 dark:text-white"
+         class="block py-2 text-slate-700 dark:text-nav-grey">
+        {{ 'NAV.ABOUT_US' | translate }}
+      </a>
+
+      <!-- Client group -->
+      <button type="button"
+              class="w-full flex items-center justify-between py-2 text-slate-700 dark:text-nav-grey"
+              (click)="toggleMobileClient()">
+        <span>{{ 'NAV.CLIENT' | translate }}</span>
+        <span class="text-xs" [class.rotate-180]="isMobileClientOpen">▾</span>
+      </button>
+      <div *ngIf="isMobileClientOpen" class="pl-4 space-y-1 text-[11px] tracking-[0.18em]">
+        <a routerLink="/offer" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.RESELLER' | translate }}
+        </a>
+        <a routerLink="/integrator" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.INTEGRATOR' | translate }}
+        </a>
+        <a routerLink="/company" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.COMPANY' | translate }}
+        </a>
+        <a routerLink="/insurer" (click)="closeMobileMenu()" class="block py-1 text-slate-700 dark:text-nav-grey">
+          {{ 'NAV.INSURER' | translate }}
+        </a>
+      </div>
+
+      <a routerLink="/compliance"
+         (click)="closeMobileMenu()"
+         routerLinkActive="font-bold text-slate-900 dark:text-white"
+         class="block py-2 text-slate-700 dark:text-nav-grey">
+        {{ 'NAV.COMPLIANCE' | translate }}
+      </a>
+
+      <!-- Mobile contact + language -->
+      <div class="pt-2 flex items-center justify-between">
+        <div (click)="switchLanguage()" 
+             class="flex items-center space-x-2 px-3 py-1.5 rounded-full border border-slate-300 dark:border-white/20 bg-slate-200/50 dark:bg-white/5 hover:border-cyber-cyan/50 transition-all cursor-pointer group">
+          <span class="text-xs font-bold text-cyber-cyan tracking-widest">{{ currentLang }}</span>
+        </div>
+        <a [routerLink]="['/contact']" 
+           (click)="closeMobileMenu()"
+           class="ml-3 flex-1 text-center py-2 bg-cyber-cyan text-black font-bold text-xs uppercase tracking-wider rounded-xl shadow-[0_0_20px_rgba(217,227,63,0.4)]">
+          {{ 'NAV.CONTACT' | translate }}
+        </a>
+      </div>
     </div>
   </div>
 </nav>

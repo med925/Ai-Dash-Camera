@@ -85,6 +85,42 @@
       </div>
     </div>
 
+    <!-- Legal / Company information (collapsed by default) -->
+    <div class="pt-10 border-t border-slate-200 dark:border-white/5">
+      <button
+        type="button"
+        (click)="toggleLegal()"
+        class="w-full flex items-center justify-between gap-4 text-left font-cyber font-bold uppercase tracking-[0.25em] text-[10px] text-purple-900 dark:text-white hover:text-cyber-cyan dark:hover:text-cyber-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-cyber-cyan/50 rounded py-1"
+        [attr.aria-expanded]="legalExpanded"
+        [attr.aria-controls]="'footer-legal-content'"
+        id="footer-legal-toggle"
+      >
+        <span>{{ 'FOOTER.LEGAL_INFO' | translate }}</span>
+        <svg class="w-4 h-4 shrink-0 transition-transform duration-200" [class.rotate-180]="legalExpanded" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div
+        id="footer-legal-content"
+        role="region"
+        [attr.aria-labelledby]="'footer-legal-toggle'"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-[10px] text-slate-600 dark:text-nav-grey font-light leading-relaxed overflow-hidden transition-all duration-300 ease-out"
+        [class.opacity-0]="!legalExpanded"
+        [class.opacity-100]="legalExpanded"
+        [style.max-height]="legalExpanded ? '500px' : '0'"
+      >
+        <p class="font-semibold text-slate-800 dark:text-white/90 pt-4">{{ 'FOOTER.COMPANY_NAME' | translate }}</p>
+        <p>{{ 'FOOTER.STATUS' | translate }}</p>
+        <p>{{ 'FOOTER.LEGAL_FORM' | translate }}</p>
+        <p>{{ 'FOOTER.SIREN' | translate }}</p>
+        <p>{{ 'FOOTER.SIRET' | translate }}</p>
+        <p>{{ 'FOOTER.VAT' | translate }}</p>
+        <p>{{ 'FOOTER.CREATED' | translate }}</p>
+        <p>{{ 'FOOTER.SHARE_CAPITAL' | translate }}</p>
+        <p class="sm:col-span-2 lg:col-span-3">{{ 'FOOTER.HEADQUARTERS' | translate }}</p>
+      </div>
+    </div>
+
     <!-- Bottom Copyright -->
     <div class="pt-10 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 font-cyber uppercase tracking-[0.2em] text-[9px] text-slate-500 dark:text-nav-grey transition-colors">
       <p>© 2026 ACCENT. <span class="opacity-30 ml-2">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate }}</span></p>

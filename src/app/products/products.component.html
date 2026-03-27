@@ -9,9 +9,9 @@
     <!-- Three aligned divs above the dashcam -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end lg:items-center text-center lg:text-left">
       <div class="space-y-0 lg:space-y-0 lg:col-span-7">
-        <h1 class="text-3xl md:text-5xl font-cyber font-extrabold leading-tight md:leading-[1.1] tracking-tighter uppercase text-purple-900 dark:text-white">
-          {{ 'PRODUCTS.HERO_DRIVE' | translate }} <span class="text-cyber-cyan italic">{{ 'PRODUCTS.HERO_SMARTER' | translate }}</span>.<br>
-          {{ 'PRODUCTS.HERO_DRIVE' | translate }} <span class="text-cyber-cyan italic">{{ 'PRODUCTS.HERO_SAFER' | translate }}</span>.
+        <h1 class="text-3xl md:text-5xl font-cyber font-extrabold uppercase tracking-tighter leading-none text-purple-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:to-[#D9E33F]">
+          {{ 'PRODUCTS.HERO_DRIVE' | translate }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-purple-600 dark:to-[#8BFF8B]">{{ 'PRODUCTS.HERO_SMARTER' | translate }}</span>.<br>
+          {{ 'PRODUCTS.HERO_DRIVE' | translate }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-purple-600 dark:to-[#8BFF8B]">{{ 'PRODUCTS.HERO_SAFER' | translate }}</span>.
         </h1>
       </div>
       <div class="w-full flex flex-col items-center text-center lg:items-start lg:text-left lg:col-span-5">
@@ -262,21 +262,6 @@
             </li>
           </ul>
         </div>
-        <!-- 5. SOS Emergency Button -->
-        <div class="p-8 rounded-3xl bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/5 flex flex-col group hover:bg-slate-400 dark:hover:bg-white/[0.04] transition-all shadow-sm">
-          <h3 class="text-lg font-cyber font-bold uppercase mb-3 text-purple-900 dark:text-white">
-            {{ 'PRODUCTS.EXTRA_MOBILE_TITLE' | translate }}
-          </h3>
-          <p class="text-nav-grey text-xs leading-relaxed mb-6 flex-grow">
-            {{ 'PRODUCTS.EXTRA_MOBILE_TEXT' | translate }}
-          </p>
-          <ul class="space-y-2 mt-auto">
-            <li *ngFor="let i of [1,2,3,4]; let idx = index" class="flex items-center gap-2 text-nav-grey text-xs">
-              <i class="fa-solid text-cyber-cyan flex-shrink-0 w-4 text-center" [ngClass]="extraMobileIcons[idx]"></i>
-              <span>{{ 'PRODUCTS.EXTRA_MOBILE_ITEM_' + i | translate }}</span>
-            </li>
-          </ul>
-        </div>
         <!-- 6. Cabin Monitoring Camera -->
         <div class="p-8 rounded-3xl bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/5 flex flex-col group hover:bg-slate-400 dark:hover:bg-white/[0.04] transition-all shadow-sm">
           <h3 class="text-lg font-cyber font-bold uppercase mb-3 text-purple-900 dark:text-white">
@@ -368,7 +353,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
         <div class="relative h-[300px] md:h-[450px] w-full group order-2 lg:order-1">
           <div class="absolute -inset-4 bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
-          <img src="assets/dash-camera5.png" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="DMS">
+          <img src="assets/dms-module-02.png" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="DMS">
         </div>
         <div class="space-y-6 order-1 lg:order-2">
           <div class="text-[10px] font-cyber text-purple-600 dark:text-cyber-cyan tracking-[0.4em] uppercase">
@@ -397,14 +382,14 @@
         </div>
         <div class="relative h-[300px] md:h-[450px] w-full group">
           <div class="absolute -inset-4 bg-cyber-cyan/5 blur-2xl group-hover:bg-cyber-cyan/10 transition-all"></div>
-          <img src="assets/dash-camera4.jpg" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="Human Detection">
+          <img src="assets/module-03-human-detection.png" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="Human Detection">
         </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
         <div class="relative h-[300px] md:h-[450px] w-full group order-2 lg:order-1">
           <div class="absolute -inset-4 bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
-          <img src="assets/dash-camera6.jpg" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="GPS">
+          <img src="assets/module-04-gps-tracking.png" class="h-full w-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="GPS">
         </div>
         <div class="space-y-6 order-1 lg:order-2">
           <div class="text-[10px] font-cyber text-purple-600 dark:text-cyber-cyan tracking-[0.4em] uppercase">
@@ -419,24 +404,6 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
-        <div class="p-10 rounded-3xl bg-slate-300 dark:bg-white/[0.03] border border-slate-400 dark:border-white/5 shadow-sm hover:border-cyber-cyan/30 transition-all group">
-          <h3 class="text-2xl font-cyber font-bold uppercase text-cyber-cyan mb-4 tracking-widest">
-            {{ 'PRODUCTS.EXTRA_NIGHT_TITLE' | translate }}
-          </h3>
-          <p class="text-nav-grey text-sm leading-relaxed">
-            {{ 'PRODUCTS.EXTRA_NIGHT_TEXT' | translate }}
-          </p>
-        </div>
-        <div class="p-10 rounded-3xl bg-slate-300 dark:bg-white/[0.03] border border-slate-400 dark:border-white/5 shadow-sm hover:border-cyber-cyan/30 transition-all group">
-          <h3 class="text-2xl font-cyber font-bold uppercase text-cyber-cyan mb-4 tracking-widest">
-            {{ 'PRODUCTS.EXTRA_MOBILE_TITLE' | translate }}
-          </h3>
-          <p class="text-nav-grey text-sm leading-relaxed">
-            {{ 'PRODUCTS.EXTRA_MOBILE_TEXT' | translate }}
-          </p>
-        </div>
-      </div>
 
     </div>
   </section>

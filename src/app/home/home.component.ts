@@ -27,13 +27,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       textKey: 'HOME.SAFETY_SLIDE_2_TEXT'
     },
     {
-      url: 'assets/dash-camera6.jpg',
+      url: 'assets/home-carousel-slide-3.png',
       alt: 'Smart fleet management and road tracking',
       titleKey: 'HOME.SAFETY_SLIDE_3_TITLE',
       textKey: 'HOME.SAFETY_SLIDE_3_TEXT'
     },
     {
-      url: 'assets/dash-camera5.png',
+      url: 'assets/home-carousel-slide-4.png',
       alt: 'Smart fleet management and road tracking',
       titleKey: 'HOME.SAFETY_SLIDE_4_TITLE',
       textKey: 'HOME.SAFETY_SLIDE_4_TEXT'

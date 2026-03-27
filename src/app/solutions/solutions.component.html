@@ -7,17 +7,16 @@
     
     <div class="max-w-7xl mx-auto relative z-10 text-center">
       <div class="badge-header-style inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-slate-300 dark:border-white/10 bg-slate-200/50 dark:bg-white/5 text-[10px] font-cyber uppercase tracking-[0.4em] text-purple-600 dark:text-cyber-cyan mb-10">
-        AI Powered Solutions
+        {{ 'SOLUTIONS.AI_POWERED' | translate }}
       </div>
       
       <h1 class="text-5xl md:text-7xl font-cyber font-extrabold uppercase tracking-tighter leading-none mb-10 text-purple-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:to-[#D9E33F]">
-        Explore our <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-purple-600 dark:to-[#8BFF8B]">Solutions</span>
+        {{ 'SOLUTIONS.EXPLORE' | translate }} <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-purple-600 dark:to-[#8BFF8B]">{{ 'SOLUTIONS.SOLUTIONS' | translate }}</span>
       </h1>
       
       <p class="text-nav-grey text-sm md:text-base max-w-4xl mx-auto leading-relaxed font-light font-cyber italic">
-        Plateforme européenne d’intelligence embarquée pour la maîtrise du risque routier professionnel																	
-Transformer le risque routier en avantage stratégique : une infrastructure AI + data conforme RGPD, conçue pour les flottes critiques, les opérateurs publics et les assureurs européens.																	
+        {{ 'SOLUTIONS.SUBTITLE' | translate }}
       </p>
     </div>
   </header>
@@ -106,10 +105,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
       </div>
 
       <p class="text-xs md:text-sm text-nav-grey/80 font-cyber mt-10">
-        Le risque est géré
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-purple-600 dark:to-[#8BFF8B] italic">
-          opérationnellement
-        </span>, pas stratégiquement.
+        {{ 'SOLUTIONS.HOW_FOOTER' | translate }}
       </p>
     </div>
   </section>
@@ -120,29 +116,29 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
     <!-- SECTOR 01: LOGISTICS (Text Left, Image Right) -->
     <section appScrollReveal id="logistics" class="scroll-section grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       <div class="space-y-8">
-        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_01</div>
+        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_01' | translate }}</div>
         <div [routerLink]="['/logistics']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-cyber-cyan/50 transition-all">
-          <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">TRANSPORT DE MARCHANDISES</h2>
+          <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'SOLUTIONS.SECTOR_01_TITLE' | translate }}</h2>
           <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </div>
         <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-          <span class="font-bold">Réduisez vos accidents et vos coûts d'exploitation</span>
+          <span class="font-bold">{{ 'SOLUTIONS.SECTOR_01_SUBTITLE' | translate }}</span>
         </p>
         <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
           <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
-             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> Exposition permanente au risque routier</li>
-             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> Explosion des coûts assurantiels</li>
-             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> Manque de pilotage du risque</li>
-             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> Responsabilité contractuelle et pression client</li>
-             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> Enjeux ESG et image</li>
+             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> {{ 'SOLUTIONS.SECTOR_01_ITEM_1' | translate }}</li>
+             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> {{ 'SOLUTIONS.SECTOR_01_ITEM_2' | translate }}</li>
+             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> {{ 'SOLUTIONS.SECTOR_01_ITEM_3' | translate }}</li>
+             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> {{ 'SOLUTIONS.SECTOR_01_ITEM_4' | translate }}</li>
+             <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span> {{ 'SOLUTIONS.SECTOR_01_ITEM_5' | translate }}</li>
           </ul>
         </div>
         <button
           type="button"
           [routerLink]="['/logistics']"
           class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-          <span>Solution et avantages assurance</span>
+          <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
           <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -161,36 +157,36 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
             <img src="assets/oil-truck.jpg" class="rounded-[40px] border border-white/10 shadow-2xl h-full w-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Oil & Gas">
         </div>
         <div class="space-y-8 order-1 lg:order-2">
-          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_02</div>
+          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_02' | translate }}</div>
           <div [routerLink]="['/oil-gas']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-red-500/50 transition-all">
-            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">TRANSPORT PRODUITS DANGEREUX (ADR)</h2>
+            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'SOLUTIONS.SECTOR_02_TITLE' | translate }}</h2>
             <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </div>
           <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-            <span class="font-bold">La sécurité n’est pas une option, c'est une obligation</span>
+            <span class="font-bold">{{ 'SOLUTIONS.SECTOR_02_SUBTITLE' | translate }}</span>
           </p>
           <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
             <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Un risque systémique, pas un simple risque routier
+                {{ 'SOLUTIONS.SECTOR_02_ITEM_1' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Pression réglementaire extrême
+                {{ 'SOLUTIONS.SECTOR_02_ITEM_2' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Explosion du coût assurantiel
+                {{ 'SOLUTIONS.SECTOR_02_ITEM_3' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Manque de données exploitables en temps réel
+                {{ 'SOLUTIONS.SECTOR_02_ITEM_4' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Enjeux ESG et réputation
+                {{ 'SOLUTIONS.SECTOR_02_ITEM_5' | translate }}
               </li>
             </ul>
          </div>
@@ -198,7 +194,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
            type="button"
            [routerLink]="['/oil-gas']"
            class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-           <span>Solution et avantages assurance</span>
+           <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
            <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
            </svg>
@@ -209,32 +205,32 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
     <!-- SECTOR 03: TAXI (Text Left, Image Right) -->
     <section appScrollReveal id="private-hire" class="scroll-section grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       <div class="space-y-8">
-        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_03</div>
+        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_03' | translate }}</div>
         <div [routerLink]="['/taxi']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-cyber-cyan/50 transition-all">
           <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'NAV.TAXI' | translate }}</h2>
           <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </div>
         <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-          <span class="font-bold">Sécurisez vos chauffeurs et protégez votre activité.</span>
+          <span class="font-bold">{{ 'SOLUTIONS.SECTOR_03_SUBTITLE' | translate }}</span>
         </p>
         <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
           <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Agressions et litige clients passagers
+              {{ 'SOLUTIONS.SECTOR_03_ITEM_1' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Manque d’outils de pilotage du risque
+              {{ 'SOLUTIONS.SECTOR_03_ITEM_2' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Sinistralité élevée et fréquence d’exposition
+              {{ 'SOLUTIONS.SECTOR_03_ITEM_3' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Difficulté d’accès à une assurance attractive
+              {{ 'SOLUTIONS.SECTOR_03_ITEM_4' | translate }}
             </li>
           </ul>
         </div>
@@ -242,7 +238,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
           type="button"
           [routerLink]="['/taxi']"
           class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-          <span>Solution et avantages assurance</span>
+          <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
           <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -255,36 +251,36 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
     <section appScrollReveal id="specialized" class="scroll-section grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <img src="assets/students.jpg" class="rounded-[40px] border border-white/10 shadow-2xl h-64 sm:h-80 md:h-[450px] w-full object-cover order-2 lg:order-1 grayscale hover:grayscale-0 transition duration-700" alt="School Bus">
         <div class="space-y-8 order-1 lg:order-2">
-          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_04</div>
+          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_04' | translate }}</div>
           <div [routerLink]="['/school-bus']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-cyber-cyan/50 transition-all">
-            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">BUS SCOLAIRES</h2>
+            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'SOLUTIONS.SECTOR_04_TITLE' | translate }}</h2>
             <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </div>
           <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-            <span class="font-bold">Protéger les enfants, rassurer les collectivités et parents</span>
+            <span class="font-bold">{{ 'SOLUTIONS.SECTOR_04_SUBTITLE' | translate }}</span>
           </p>
           <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
             <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Tolérance au risque quasi nulle
+                {{ 'SOLUTIONS.SECTOR_04_ITEM_1' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Responsabilité juridique renforcée
+                {{ 'SOLUTIONS.SECTOR_04_ITEM_2' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Pression des collectivités et des parents
+                {{ 'SOLUTIONS.SECTOR_04_ITEM_3' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Difficulté de pilotage du risque
+                {{ 'SOLUTIONS.SECTOR_04_ITEM_4' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Pression assurantielle
+                {{ 'SOLUTIONS.SECTOR_04_ITEM_5' | translate }}
               </li>
             </ul>
           </div>
@@ -292,7 +288,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
             type="button"
             [routerLink]="['/school-bus']"
             class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-            <span>Solution et avantages assurance</span>
+            <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
             <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -303,36 +299,36 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
     <!-- SECTOR 05: PUBLIC BUS (Text Left, Image Right) -->
     <section appScrollReveal id="public-transport" class="scroll-section grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       <div class="space-y-8">
-        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_05</div>
+        <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_05' | translate }}</div>
         <div [routerLink]="['/public-bus']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-cyber-cyan/50 transition-all">
-          <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">BUS & TRANSPORT PUBLIC</h2>
+          <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'SOLUTIONS.SECTOR_05_TITLE' | translate }}</h2>
           <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </div>
         <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-          <span class="font-bold">Sécurisez passagers et conducteurs</span>
+          <span class="font-bold">{{ 'SOLUTIONS.SECTOR_05_SUBTITLE' | translate }}</span>
         </p>
         <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+          <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
           <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Exposition élevée en environnement urbain dense
+              {{ 'SOLUTIONS.SECTOR_05_ITEM_1' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Responsabilité vis-à-vis des passagers
+              {{ 'SOLUTIONS.SECTOR_05_ITEM_2' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Pression politique et médiatique
+              {{ 'SOLUTIONS.SECTOR_05_ITEM_3' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Explosion des coûts assurantiels et budgétaires
+              {{ 'SOLUTIONS.SECTOR_05_ITEM_4' | translate }}
             </li>
             <li class="flex items-center">
               <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-              Manque de pilotage stratégique du risque
+              {{ 'SOLUTIONS.SECTOR_05_ITEM_5' | translate }}
             </li>
           </ul>
         </div>
@@ -340,7 +336,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
           type="button"
           [routerLink]="['/public-bus']"
           class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-          <span>Solution et avantages assurance</span>
+          <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
           <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -355,36 +351,36 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
             <img src="assets/rent-car1.jpg" class="rounded-[40px] border border-white/10 shadow-2xl h-full w-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Rent Car">
         </div>
         <div class="space-y-8 order-1 lg:order-2">
-          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">APPLICATION_06</div>
+          <div class="text-cyber-cyan font-cyber font-black tracking-[0.5em] text-[10px]">{{ 'SOLUTIONS.APPLICATION_06' | translate }}</div>
           <div [routerLink]="['/car-rental']" class="group flex items-center justify-between p-6 rounded-2xl cursor-pointer hover:border-cyber-cyan/50 transition-all">
-            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">LOCATION & LLD</h2>
+            <h2 class="text-4xl md:text-5xl font-cyber font-bold uppercase tracking-widest text-white">{{ 'SOLUTIONS.SECTOR_06_TITLE' | translate }}</h2>
             <svg class="w-6 h-6 text-cyber-cyan group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </div>
           <p class="text-nav-grey leading-relaxed border-l-2 border-cyber-cyan pl-6 text-sm md:text-base">
-            <span class="font-bold">Protégez vos véhicules et réduisez la fraude</span>
+            <span class="font-bold">{{ 'SOLUTIONS.SECTOR_06_SUBTITLE' | translate }}</span>
           </p>
           <div class="p-8 bg-slate-300 dark:bg-white/[0.02] border border-slate-400 dark:border-white/10 rounded-[32px] shadow-sm backdrop-blur-md">
-            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Enjeux :</h4>
+            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">{{ 'SOLUTIONS.CHALLENGES_LABEL' | translate }}</h4>
             <ul class="text-nav-grey text-[11px] space-y-3 uppercase tracking-widest leading-relaxed">
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Multiplication des conducteurs = dilution du risque
+                {{ 'SOLUTIONS.SECTOR_06_ITEM_1' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Impact direct sur la valeur résiduelle
+                {{ 'SOLUTIONS.SECTOR_06_ITEM_2' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Explosion des coûts assurantiels
+                {{ 'SOLUTIONS.SECTOR_06_ITEM_3' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Difficulté à différencier l’offre
+                {{ 'SOLUTIONS.SECTOR_06_ITEM_4' | translate }}
               </li>
               <li class="flex items-center">
                 <span class="w-1.5 h-1.5 bg-cyber-cyan rounded-full mr-3 shadow-[0_0_10px_#00FFC2]"></span>
-                Risque juridique et réputationnel
+                {{ 'SOLUTIONS.SECTOR_06_ITEM_5' | translate }}
               </li>
             </ul>
           </div>
@@ -392,7 +388,7 @@ Transformer le risque routier en avantage stratégique : une infrastructure AI +
             type="button"
             [routerLink]="['/car-rental']"
             class="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-cyber-cyan text-black font-cyber text-[11px] uppercase tracking-[0.25em] hover:bg-cyan-300 transition-colors">
-            <span>Solution et avantages assurance</span>
+            <span>{{ 'SOLUTIONS.SOLUTION_INSURANCE_BENEFITS' | translate }}</span>
             <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
